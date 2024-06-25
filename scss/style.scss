@@ -1,0 +1,465 @@
+@use'./reset.scss';
+@use'./_page.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primary-font: 'Roboto';
+$primary-color: #1B2473;
+
+body {
+  background-color: $primary-color;
+}
+
+.main{
+  display: flex;
+  justify-content: center
+}
+
+.container_form{
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:0px 0px 40px rgba(0, 0, 0, 0.25);
+  width: 600px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  position:absolute;
+	top:82px;
+
+  &-buttonRegistr{
+    padding: 0;
+    text-align: right;
+    width: 100%;
+    height: 26px;
+    color: $primary-color;
+    border: none; 
+    background: none; 
+    font-family: $primary-font;
+    font-weight: 900;
+    font-size: 14px;
+    cursor: pointer;
+
+      &:hover{
+      color: #6b72af;
+    }
+  }
+
+  &-buttonAuth{
+    display: none;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+    height: 26px;
+    color: $primary-color;
+    border: none; 
+    background: none; 
+    font-family: $primary-font;
+    font-weight: 900;
+    font-size: 14px;
+    cursor: pointer;
+
+      &:hover{
+      color: #6b72af;
+    }
+  }
+
+  
+
+  &-title{
+    color: #787878;
+    font-family: $primary-font;
+    font-weight: 900;
+    font-size: 50px;
+  }
+
+  &-inputEmail{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .label{
+      font-family: $primary-font;
+      padding-left: 24px;
+      color: #787878;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .inputEmail{
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+
+      .binding{
+        font-family: $primary-font;
+        color: #787878;
+        font-weight: 900;
+        font-size: 24px;
+    }  
+
+    .email{
+        border: 2px solid #787878;
+        color: #787878;
+        border-radius: 8px;
+        width: 510px;
+        height: 49px;
+        padding: 7px 15px;
+        font-family: $primary-font;
+        font-weight: 900;
+        font-size: 28px;
+
+          &::placeholder {
+          color: #cccccc; 
+        }
+      }
+    }
+  }
+
+  &-inputEmailError{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: none;
+
+    .labelError{
+      font-family: $primary-font;
+      padding-left: 24px;
+      color: #CB2424;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .inputEmailError{
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+
+      .bindingError{
+        font-family: $primary-font;
+        color: #CB2424;
+        font-weight: 900;
+        font-size: 24px;
+    }  
+
+    .emailError{
+        border: 2px solid #CB2424;
+        color: #787878;
+        border-radius: 8px;
+        width: 510px;
+        height: 49px;
+        padding: 7px 15px;
+        font-family: $primary-font;
+        font-weight: 900;
+        font-size: 28px;
+
+          &::placeholder {
+          color: #cccccc; 
+        }
+      }
+    }
+
+    .error{
+      display: none;
+      padding-left: 16px;
+      color: #CB2424;
+      font-family: $primary-font;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .errorValid{
+      display: none;
+      padding-left: 16px;
+      color: #CB2424;
+      font-family: $primary-font;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &-inputPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .label{
+      font-family: $primary-font;
+      padding-left: 24px;
+      color: #787878;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .inputPassword{
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+
+      .binding{
+        font-family: $primary-font;
+        color: #787878;
+        font-weight: 900;
+        font-size: 24px;
+      }  
+
+    .password{
+        border: 2px solid #787878;
+        color: #787878;
+        border-radius: 8px;
+        width: 510px;
+        height: 49px;
+        padding: 7px 15px;
+        font-family: $primary-font;
+        font-weight: 900;
+        font-size: 28px;
+
+          &::placeholder {
+          color: #cccccc; 
+        }
+      }
+    }
+  }
+
+  &-inputPasswordError{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: none;
+
+    .labelError{
+      font-family: $primary-font;
+      padding-left: 24px;
+      color: #CB2424;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .inputPasswordError{
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+
+      .bindingError{
+        font-family: $primary-font;
+        color: #CB2424;
+        font-weight: 900;
+        font-size: 24px;
+      }  
+
+    .passwordError{
+        border: 2px solid #CB2424;
+        color: #787878;
+        border-radius: 8px;
+        width: 510px;
+        height: 49px;
+        padding: 7px 15px;
+        font-family: $primary-font;
+        font-weight: 900;
+        font-size: 28px;
+
+          &::placeholder {
+          color: #cccccc; 
+        }
+      }
+    }
+
+    .error{
+      padding-left: 16px;
+      color: #CB2424;
+      font-family: $primary-font;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .errorCount{
+      display: none;
+      padding-left: 16px;
+      color: #CB2424;
+      font-family: $primary-font;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &-inputСheckbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 525px;
+
+    .binding{
+      font-family: $primary-font;
+      color: #787878;
+      font-weight: 900;
+      font-size: 24px;
+    }
+
+    .checkbox {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border: 2px solid #787878;
+      border-radius: 4px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      position: relative;
+  
+      &:checked {
+        background-color: #1A226B;
+        border: none;
+      }
+  
+      &:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    .form-label {
+      font-family: $primary-font;
+      font-size: 16px;
+      color: #787878;
+      
+  
+      a {
+        text-decoration: underline;
+        color: #787878;
+        cursor: pointer;
+  
+        &:hover {
+          color: #2400f0;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-inputСheckboxError{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    width: 525px;
+
+    .inputСheckboxError{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .bindingError{
+      font-family: $primary-font;
+      color: #CB2424;
+      font-weight: 900;
+      font-size: 24px;
+    }
+
+    .checkboxError {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border: 2px solid #CB2424;
+      border-radius: 4px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      position: relative;
+  
+      &:checked {
+        background-color: #1A226B;
+        border: none;
+      }
+  
+      &:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    .form-labelError {
+      font-family: $primary-font;
+      font-size: 16px;
+      color: #787878;
+      
+  
+      a {
+        text-decoration: underline;
+        color: #787878;
+        cursor: pointer;
+  
+        &:hover {
+          color: #2400f0;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .error{
+      padding-left: 16px;
+      color: #CB2424;
+      font-family: $primary-font;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &-login{
+    width: 180px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    background-color: #1A226B;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #6b72af;
+    }
+  }
+
+  &-registration{
+    display: none;
+    width: 180px;
+    height: 52px;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    background-color: #1A226B;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #6b72af;
+    }
+  }
+
+  .errorLogin{
+    display: none;
+    color: #CB2424;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,489 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+input, textarea {
+  outline: none;
+}
+
+body {
+  background-color: #1B2473;
+}
+
+.main {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto";
+  font-size: 32px;
+}
+
+body {
+  background-color: #1B2473;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.container_form {
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+  width: 600px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  position: absolute;
+  top: 82px;
+}
+.container_form-buttonRegistr {
+  padding: 0;
+  text-align: right;
+  width: 100%;
+  height: 26px;
+  color: #1B2473;
+  border: none;
+  background: none;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+}
+.container_form-buttonRegistr:hover {
+  color: #6b72af;
+}
+.container_form-buttonAuth {
+  display: none;
+  padding: 0;
+  text-align: right;
+  width: 100%;
+  height: 26px;
+  color: #1B2473;
+  border: none;
+  background: none;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+}
+.container_form-buttonAuth:hover {
+  color: #6b72af;
+}
+.container_form-title {
+  color: #787878;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 50px;
+}
+.container_form-inputEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.container_form-inputEmail .label {
+  font-family: "Roboto";
+  padding-left: 24px;
+  color: #787878;
+  font-weight: 900;
+  font-size: 16px;
+}
+.container_form-inputEmail .inputEmail {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.container_form-inputEmail .inputEmail .binding {
+  font-family: "Roboto";
+  color: #787878;
+  font-weight: 900;
+  font-size: 24px;
+}
+.container_form-inputEmail .inputEmail .email {
+  border: 2px solid #787878;
+  color: #787878;
+  border-radius: 8px;
+  width: 510px;
+  height: 49px;
+  padding: 7px 15px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 28px;
+}
+.container_form-inputEmail .inputEmail .email::-moz-placeholder {
+  color: #cccccc;
+}
+.container_form-inputEmail .inputEmail .email::placeholder {
+  color: #cccccc;
+}
+.container_form-inputEmailError {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+}
+.container_form-inputEmailError .labelError {
+  font-family: "Roboto";
+  padding-left: 24px;
+  color: #CB2424;
+  font-weight: 900;
+  font-size: 16px;
+}
+.container_form-inputEmailError .inputEmailError {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.container_form-inputEmailError .inputEmailError .bindingError {
+  font-family: "Roboto";
+  color: #CB2424;
+  font-weight: 900;
+  font-size: 24px;
+}
+.container_form-inputEmailError .inputEmailError .emailError {
+  border: 2px solid #CB2424;
+  color: #787878;
+  border-radius: 8px;
+  width: 510px;
+  height: 49px;
+  padding: 7px 15px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 28px;
+}
+.container_form-inputEmailError .inputEmailError .emailError::-moz-placeholder {
+  color: #cccccc;
+}
+.container_form-inputEmailError .inputEmailError .emailError::placeholder {
+  color: #cccccc;
+}
+.container_form-inputEmailError .error {
+  display: none;
+  padding-left: 16px;
+  color: #CB2424;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+}
+.container_form-inputEmailError .errorValid {
+  display: none;
+  padding-left: 16px;
+  color: #CB2424;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+}
+.container_form-inputPassword {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.container_form-inputPassword .label {
+  font-family: "Roboto";
+  padding-left: 24px;
+  color: #787878;
+  font-weight: 900;
+  font-size: 16px;
+}
+.container_form-inputPassword .inputPassword {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.container_form-inputPassword .inputPassword .binding {
+  font-family: "Roboto";
+  color: #787878;
+  font-weight: 900;
+  font-size: 24px;
+}
+.container_form-inputPassword .inputPassword .password {
+  border: 2px solid #787878;
+  color: #787878;
+  border-radius: 8px;
+  width: 510px;
+  height: 49px;
+  padding: 7px 15px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 28px;
+}
+.container_form-inputPassword .inputPassword .password::-moz-placeholder {
+  color: #cccccc;
+}
+.container_form-inputPassword .inputPassword .password::placeholder {
+  color: #cccccc;
+}
+.container_form-inputPasswordError {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  display: none;
+}
+.container_form-inputPasswordError .labelError {
+  font-family: "Roboto";
+  padding-left: 24px;
+  color: #CB2424;
+  font-weight: 900;
+  font-size: 16px;
+}
+.container_form-inputPasswordError .inputPasswordError {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.container_form-inputPasswordError .inputPasswordError .bindingError {
+  font-family: "Roboto";
+  color: #CB2424;
+  font-weight: 900;
+  font-size: 24px;
+}
+.container_form-inputPasswordError .inputPasswordError .passwordError {
+  border: 2px solid #CB2424;
+  color: #787878;
+  border-radius: 8px;
+  width: 510px;
+  height: 49px;
+  padding: 7px 15px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 28px;
+}
+.container_form-inputPasswordError .inputPasswordError .passwordError::-moz-placeholder {
+  color: #cccccc;
+}
+.container_form-inputPasswordError .inputPasswordError .passwordError::placeholder {
+  color: #cccccc;
+}
+.container_form-inputPasswordError .error {
+  padding-left: 16px;
+  color: #CB2424;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+}
+.container_form-inputPasswordError .errorCount {
+  display: none;
+  padding-left: 16px;
+  color: #CB2424;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+}
+.container_form-inputСheckbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 525px;
+}
+.container_form-inputСheckbox .binding {
+  font-family: "Roboto";
+  color: #787878;
+  font-weight: 900;
+  font-size: 24px;
+}
+.container_form-inputСheckbox .checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #787878;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+.container_form-inputСheckbox .checkbox:checked {
+  background-color: #1A226B;
+  border: none;
+}
+.container_form-inputСheckbox .checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.container_form-inputСheckbox .form-label {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #787878;
+}
+.container_form-inputСheckbox .form-label a {
+  text-decoration: underline;
+  color: #787878;
+  cursor: pointer;
+}
+.container_form-inputСheckbox .form-label a:hover {
+  color: #2400f0;
+  text-decoration: underline;
+}
+.container_form-inputСheckboxError {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  width: 525px;
+}
+.container_form-inputСheckboxError .inputСheckboxError {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container_form-inputСheckboxError .bindingError {
+  font-family: "Roboto";
+  color: #CB2424;
+  font-weight: 900;
+  font-size: 24px;
+}
+.container_form-inputСheckboxError .checkboxError {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #CB2424;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+.container_form-inputСheckboxError .checkboxError:checked {
+  background-color: #1A226B;
+  border: none;
+}
+.container_form-inputСheckboxError .checkboxError:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.container_form-inputСheckboxError .form-labelError {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #787878;
+}
+.container_form-inputСheckboxError .form-labelError a {
+  text-decoration: underline;
+  color: #787878;
+  cursor: pointer;
+}
+.container_form-inputСheckboxError .form-labelError a:hover {
+  color: #2400f0;
+  text-decoration: underline;
+}
+.container_form-inputСheckboxError .error {
+  padding-left: 16px;
+  color: #CB2424;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+}
+.container_form-login {
+  width: 180px;
+  height: 52px;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  background-color: #1A226B;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+}
+.container_form-login:hover {
+  background-color: #6b72af;
+}
+.container_form-registration {
+  display: none;
+  width: 180px;
+  height: 52px;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  background-color: #1A226B;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+}
+.container_form-registration:hover {
+  background-color: #6b72af;
+}
+.container_form .errorLogin {
+  display: none;
+  color: #CB2424;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

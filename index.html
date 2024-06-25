@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="container_form">
+      <button class="container_form-buttonRegistr" id="registrButton">Зарегистрироваться</button>
+      <button class="container_form-buttonAuth" id="authButton">Авторизоваться</button>
+      <span  class=container_form-title id="title">Вход</span>
+
+      <div class="container_form-inputEmail">
+        <span  class="label">Email</span>
+        <div class="inputEmail">
+          <span  class="binding">*</span>
+          <input type="text" class="email" placeholder="Введите email" id="email">
+        </div>
+      </div>
+
+      <div class="container_form-inputEmailError">
+        <span  class="labelError">Email</span>
+        <div class="inputEmailError">
+          <span  class="bindingError">*</span>
+          <input type="text" class="emailError" placeholder="Введите email" id="emailError">
+        </div>
+        <span  class="error">Поле обязательно для заполнения</span>
+        <span  class="errorValid">Email невалидный</span>
+      </div>
+
+      <div class="container_form-inputPassword">
+        <span  class="label">Пароль</span>
+        <div class="inputPassword">
+          <span  class="binding">*</span>
+          <input type="text" class="password" placeholder="Введите пароль" id="password">
+        </div>
+      </div>
+
+      <div class="container_form-inputPasswordError">
+        <span  class="labelError">Пароль</span>
+        <div class="inputPasswordError">
+          <span  class="bindingError">*</span>
+          <input type="text" class="passwordError" placeholder="Введите пароль" id="passwordError">
+        </div>
+        <span  class="error">Поле обязательно для заполнения</span>
+        <span  class="errorCount">Пароль должен содержать как минимум 8 символов</span>
+      </div>
+
+      <div class="container_form-inputСheckbox">
+        <span  class="binding">*</span>
+        <input type="checkbox" class="checkbox" id="agreement">
+        <span class="form-label" id="checkboxLabel">Я согласен с <a href="#">Правилами пользования приложением</a></span>
+      </div>
+
+      <div class="container_form-inputСheckboxError">
+        <div class="inputСheckboxError">
+          <span  class="bindingError">*</span>
+          <input type="checkbox" class="checkboxError" id="agreementError">
+          <span class="form-labelError" id="checkboxLabel">Я согласен с <a href="#">Правилами пользования приложением</a></span>
+        </div>
+        
+        <span  class="error">Поле обязательно для заполнения</span>
+      </div>
+
+      <button class="container_form-login" id="loginButton">Вход</button>
+      <button class="container_form-registration" id="registration">Регистрация</button>
+      <span  class="errorLogin">Неверные email или пароль.</span>
+      
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
