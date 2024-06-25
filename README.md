@@ -9,34 +9,34 @@ localStorage — это встроенный объект в веб-браузе
 
 ```
 // Сохранение данных и переход на новую страницу
-    if (!isError && emailInput !== '' && passwordInput !== '' && checkboxInput) {
+if (!isError && emailInput !== '' && passwordInput !== '' && checkboxInput) {
 
-      // Получаем существующие данные из localStorage
-      let users = JSON.parse(localStorage.getItem('users')) || [];
+  // Получаем существующие данные из localStorage
+  let users = JSON.parse(localStorage.getItem('users')) || [];
       
-      // Добавляем нового пользователя в массив
-      users.push({ email: emailInput, password: passwordInput });
+  // Добавляем нового пользователя в массив
+  users.push({ email: emailInput, password: passwordInput });
 
-      // Сохраняем обновленный массив в localStorage
-      localStorage.setItem('users', JSON.stringify(users));
+  // Сохраняем обновленный массив в localStorage
+  localStorage.setItem('users', JSON.stringify(users));
       
-      // Переход на новую страницу
-      window.location.href = 'page.html';
+  // Переход на новую страницу
+  window.location.href = 'page.html';
 
-    } else if (isError) {
-      if ((emailInputError !== '' && passwordInputError !== '' && checkboxInputError) ||
-        (emailInput !== '' && passwordInputError !== '' && checkboxInputError) || 
-        (emailInputError !== '' && passwordInput !== '' && checkboxInputError) || 
-        (emailInputError !== '' && passwordInputError !== '' && checkboxInput) ||
-        (emailInput !== '' && passwordInputError !== '' && checkboxInput)) {
+} else if (isError) {
+  if ((emailInputError !== '' && passwordInputError !== '' && checkboxInputError) ||
+  (emailInput !== '' && passwordInputError !== '' && checkboxInputError) || 
+  (emailInputError !== '' && passwordInput !== '' && checkboxInputError) || 
+  (emailInputError !== '' && passwordInputError !== '' && checkboxInput) ||
+  (emailInput !== '' && passwordInputError !== '' && checkboxInput)) {
 
-        // Получаем существующие данные из localStorage
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        
-        // Добавляется новый пользователь с ошибками в массив
-        users.push({ email: emailInputError, password: passwordInputError });
-        localStorage.setItem('users', JSON.stringify(users));
-        window.location.href = 'page.html';
-      }
-    }
+    // Получаем существующие данные из localStorage
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+          
+    // Добавляется новый пользователь с ошибками в массив
+    users.push({ email: emailInputError, password: passwordInputError });
+    localStorage.setItem('users', JSON.stringify(users));
+    window.location.href = 'page.html';
+  }
+}    
   ```
